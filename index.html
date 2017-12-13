@@ -6,13 +6,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-color navbar-fixed-top">
-    <div class="container">
+  <nav class="navbar navbar-inverse navbar-color navbar-fixed-top">
+    <div class="container-fluid">
+    <div class="container-nav">
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -20,10 +21,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-      </div>
+        <a class="navbar-brand" href="#">DH</a>
+        </a>
+    </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-center">
+
+                  <ul class="nav navbar-nav navbar-right">
                       <li class="page-scroll">
                           <a href="#page-top">Home</a>
                       </li>
@@ -44,38 +48,24 @@
               <!-- /.navbar-collapse -->
           </div>
           <!-- /.container-fluid -->
+        </div>
       </nav>
 
       <!-- Header -->
       <header>
-          <div class="container">
+          <div class="container-fluid">
               <div class="row">
-                  <div class="col-lg-12">
-                      <div class="intro-text">
-                          <span class="name">Danielle Handler</span>
-                          <span class="skills">CATCHY TAG LINE</span>
-                          <hr class="star-light">
-                      </div>
-                      <img class="img-responsive img-bigScreen" src="images/workdesk.jpg" alt="laptop" title="work station">
-                  </div>
-              </div>
-              <div class="seeMore-btn text-center btn-style">
-                  <div class="btn-styleLine double-line page-scroll">
-                      <a href="#portfolio" class="btn btn-lg btn-outline">
-                          <i class="fa fa-fw fa-arrow-circle-down"></i>See More
-                      </a>
-                  </div>
-              </div>
-          </div>
+                  <div class="col-md-12 hero"></div>
+                </div>
+            </div>
       </header>
 
       <!-- My Likes Grid Section -->
       <section id="myLikes">
-          <div class="container">
+          <div class="container-fluid">
               <div class="row">
-                  <div class="col-lg-12 text-center">
+                  <div class="col-md-12 text-center">
                       <h2>What I Do</h2>
-                      <hr class="star-primary">
                   </div>
               </div>
               <div class="row">
@@ -86,10 +76,10 @@
                       </a>
                       <article class="portfolio-item-One">
                           <header>
-                              <h3>Develop & Design</h3>
+                              <h3>Design</h3>
                           </header>
                           <p>
-                            I am a front-End designer. I do design and coding of web application.
+                            I am a front-end designer. I do coding and design of web application.
                           </p>
                       </article>
                   </div>
@@ -130,7 +120,7 @@
       <section id="portfolio">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-12 text-center">
+                  <div class="col-md-12 text-center">
                       <h2>Portfolio</h2>
                       <hr class="star-primary">
                   </div>
@@ -158,13 +148,6 @@
                   </a>
               </div>
           </div>
-          <div class="loadMore-btn text-center btn-style">
-              <div class="btn-styleLine double-line">
-                  <a href="#" class="btn btn-lg btn-outline">
-                      <i class="fa fa-fw fa-plus"></i>Load More
-                  </a>
-              </div>
-          </div>
       </section>
       <div>
           <hr class="loc-hr">
@@ -174,7 +157,7 @@
       <section id="about">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-12 text-center">
+                  <div class="col-md-12 text-center">
                       <h2>About me</h2>
                       <hr class="star-primary">
                   </div>
@@ -220,13 +203,9 @@
                       </article>
                   </div>
               </div>
-              <div class="text-center btn-style double-line">
-                  <div class="btn-styleLine">
-                      <a href="#" class="btn btn-lg btn-outline">
-                          <i class="fa fa-fw fa-download"></i> Want to see more examples? Email me.
-                      </a>
-                  </div>
-              </div>
+          </div>
+          <div>
+              <hr class="loc-hr">
           </div>
       </section>
 
@@ -234,13 +213,13 @@
       <section id="contact">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-12 text-center">
+                  <div class="col-md-12 text-center">
                       <h2>Contact Me</h2>
                       <hr class="star-primary">
                   </div>
               </div>
               <div class="row form-padding">
-                  <div class="col-lg-8 col-lg-offset-2">
+                  <div class="col-md-8 col-md-offset-2">
                       <form name="sentMessage" id="contactForm" novalidate>
                           <div class="row control-group">
                               <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -263,7 +242,6 @@
                                   <p class="help-block text-danger"></p>
                               </div>
                           </div>
-                          <br>
                           <div class="contact-btn text-center btn-style">
                               <div class="btn-styleLine double-line page-scroll">
                                   <a href="#portfolio" class="btn btn-lg btn-outline">
@@ -273,6 +251,7 @@
                           </div>
                       </form>
                   </div>
+                  <hr>
               </div>
           </div>
       </section>
@@ -328,7 +307,6 @@
                                   </a>
                               </li>
                           </ul>
-                          <p>If you want to hire me please use phone contact or my E-mail.</p>
                       </div>
                   </div>
               </div>

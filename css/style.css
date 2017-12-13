@@ -18,24 +18,29 @@ a:active,
 a.active {
     outline: 0;
     color: #fad663;
+    text: uppercase;
 }
 
-h1,
+.h1 {
+  letter-spacing: 10px;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: 'Ubuntu',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: helvetica;
+    font-weight: 1200;
+    text-align: center;
 }
 
 hr.star-light,
 hr.star-primary {
     margin: 20px auto 30px;
     padding: 0;
-    max-width: 250px;
+    max-width: 25%;
     border: 0;
     border-top: solid 5px;
     text-align: center;
@@ -43,59 +48,50 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f197";
+    content: "";
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
     font-family: sans-serif;
     font-size: 2em;
+    text-align: center;
+    max-width: 25%;
 }
 
 hr.star-light {
     border-color: #212121;
+    text-align: center;
 }
 
 hr.star-light:after {
     color: #212121;
     background-color: #FDD200;
+    max-width: 25%;
+
 }
 
 hr.star-primary {
     border-color: #212121;
+    max-width: 25px;
+
 }
 
 hr.star-primary:after {
     color: #212121;
     background-color: #fff;
+    max-width: 25px;
 }
 
 .img-centered {
     margin: 0 auto;
 }
 
-header {
-    text-align: center;
-    color: #212121;
-    background: #fdd200;
-}
-
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.header img {
-  margin: 0 auto;
-}
-
-header .intro-text .name {
-    padding-top: 20px;
-    display: block;
-    text-transform: uppercase;
+.header {
+    content: ""
+    width:100%;
+    overflow: hidden;
     font-family: sans-serif;
-    font-size: large;
-    font-weight: 700;
 }
 
 header .intro-text .skills {
@@ -104,36 +100,36 @@ header .intro-text .skills {
 }
 
 @media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+.header .container-fluid {
+        padding-top: 400px;
+        padding-bottom: 50px;
     }
-
-    header .intro-text .name {
+.header {
         font-size: 4.75em;
     }
 
-    header .intro-text .skills {
+.skills {
         font-size: 1.75em;
     }
 }
 
 @media(min-width:1024px) {
     header {
-        background:#F7CC01 url("https://res.cloudinary.com/dasdezine/image/upload/v1458051926/hero_tab_xawhqo.jpg") no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: center 50px;
+        background-position: center 100%;
     }
-    header .container {
+    header .container-fluid {
         padding-top: 100px;
         padding-bottom: 200px;
+        width: 100%;
     }
 
     header img.img-bigScreen {
         display: none;
+        padding: 0;
     }
 
     hr.star-light:after {
@@ -143,99 +139,100 @@ header .intro-text .skills {
 
 @media(min-width:1366px) {
     header {
-        background-position: center 10px;
+        background-position: center;
     }
 }
 
 
 @media(min-width:768px) {
-    .navbar-fixed-top {
+.navbar-fixed-top {
+        background-color: rgba(255, 0, 0, 0.5);
         padding: 25px 0;
-        -webkit-transition: padding .3s;
+        -webkit-transition: padding .7s;
         -moz-transition: padding .3s;
         transition: padding .3s;
-    }
+}
 
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+.navbar-fixed-top .navbar-brand {
+        content: ""
+        font-size: 6em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
-    }
+}
 
-    .navbar-fixed-top.navbar-shrink {
+.navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
     }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
+.navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: 'Ubuntu',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: sans-serif;
+    letter-spacing: 2px;
 }
 
-.navbar-color {
-    background-color: #212121;
-}
-
-.navbar a:focus {
-    outline: 0;
+.nav .navbar-nav .navbar-right {
 }
 
 .navbar .navbar-nav {
-    letter-spacing: 1px;
+    letter-spacing: 10px;
+    font-weight: bold;
 }
 
-.navbar-default .navbar-toggle {
+
+.navbar-inverse .navbar-toggle {
     border-color:#fdd200;
 }
 
-.navbar-default .navbar-toggle:hover {
-    background-color:#fdd200;
+.navbar-inverse .navbar-toggle:hover {
+    background-color:rgb(255,255,255);
 }
 
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-inverse .navbar-toggle .icon-bar {
   background-color:#fff;
 }
 
-.navbar-default .navbar-nav>li>a {
-    color:#fff;
+.navbar-inverse .navbar-nav>li>a {
+    background-color: black;
 }
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav>li>a:hover {
     color: #fdd200;
 }
 
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus
-{
-    color: #212121;
-    background-color: #fdd200;
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+    color: black;
 }
 
 .navbar .navbar-nav li a:focus {
     outline: 0;
 }
 
-.navbar-default,
 .navbar-inverse {
     border: 0;
+    border-color: transparent;
 }
 
-section {
-    padding: 50px 0;
+
+.hero {
+  background: url("../images/workdesk.jpg") no-repeat scroll center center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+
 }
 
-section h2 {
+.section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 25px;
 }
 
-section.success {
+.section.success {
     color: #fff;
     background: #fad663;
 }
@@ -264,12 +261,12 @@ section.success {
     text-align: center;
 }
 #myLikes .portfolio-item p,#about .about-item p {
-
     text-align: center;
     line-height: 1.5;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
 }
 #myLikes .portfolio-item-Three p, #about .about-item-Three p {
+    text-align: center;
     padding-bottom: 5px;
 }
 
@@ -279,11 +276,12 @@ section.success {
 
 .about-item .img-responsive {
     margin: 0 auto;
+
 }
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 0 0 0px;
 }
 
 #portfolio .portfolio-item .portfolio-link,
@@ -296,15 +294,11 @@ section.success {
 
 #myLikes .portfolio-link .fa {
     font-size: 10em;
-    padding: 10px 15px;
+    padding: 10px 10px;
     color:#212121;
     border-radius:6px;
     border-radius:5px 20px 5px;;
     background-color:#F7CC01;
-}
-
-.seeMore-btn .fa, #portfolio .fa, .contact-btn .fa {
-    padding-right: 5px;
 }
 
 #portfolio * {
@@ -312,8 +306,8 @@ section.success {
 }
 
 hr.loc-hr {
-    border-top: 2px dashed #212121;
-    max-width: 85%;
+    border-top: 2px #212121;
+    max-width: 25%;
 }
 
 @media(min-width:767px) {
@@ -327,23 +321,15 @@ hr.loc-hr {
     line-height: 1.5;
 }
 
-div.seeMore-btn {
-    margin-top: 25px;
-}
-
-div.seeMore-btn .btn-outline {
-    background: #fdd200;
-}
-
 div.contact-btn .btn-outline {
     background: #d2eae3;
 }
 
-div.seeMore-btn .btn-outline, div.contact-btn .btn-outline {
+div.btn-outline, div.contact-btn .btn-outline {
     transition: all .3s ease-in-out;
 }
 
-div.seeMore-btn .btn-outline:hover, div.contact-btn .btn-outline:hover {
+div.btn-outline:hover, div.contact-btn .btn-outline:hover {
     background: #fff;
 }
 
@@ -379,7 +365,7 @@ div.seeMore-btn .btn-outline:hover, div.contact-btn .btn-outline:hover {
         display: inline-block;
     }
 
-    div.seeMore-btn .btn-styleLine {
+    div.btn-styleLine {
         background: transparent;
     }
 
@@ -420,14 +406,6 @@ div.seeMore-btn .btn-outline:hover, div.contact-btn .btn-outline:hover {
     }
 }
 
-@media(min-width:1024px) {
-    div.seeMore-btn {
-        position: relative;
-        top:150px;
-        left:10px;
-    }
-}
-
 /*******btn double line style ends***********/
 
 #contact {
@@ -438,15 +416,15 @@ div.seeMore-btn .btn-outline:hover, div.contact-btn .btn-outline:hover {
 }
 
 #contact .form-padding {
-    padding:0px 10px;
+    padding:50px 10px;
 }
 
 .floating-label-form-group input,
 .floating-label-form-group textarea {
     z-index: 1;
     position: relative;
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 10px;
+    padding-left: 10px;
     border: 0;
     border-radius: 0;
     font-size: 1.5em;
@@ -488,12 +466,12 @@ div.seeMore-btn .btn-outline:hover, div.contact-btn .btn-outline:hover {
 
 form .floating-label-form-group {
     background: #fad663;
-    border: 2px solid #212121;
+    border: 15px solid #212121;
     border-radius: 6px;
 }
 
 footer {
-    color: #fff;
+    color: black;
 }
 
 footer h3 {
