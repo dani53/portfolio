@@ -11,28 +11,47 @@ p.small {
     font-size: 16px;
 }
 
-a,
+.a,
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #fad663;
-    text: uppercase;
+    text-transform:uppercase;
+    text-transform: ease;
+    letter-spacing: 8px;
+    font-size: 22px;
+    font-family: 'Comfortaa';
+    transition-delay: .1s;
 }
 
 .h1 {
   letter-spacing: 10px;
 }
 
-h2,
-h3,
+h2 {
+  letter-spacing: 10px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: helvetica;
+  text-align: center;
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Comfortaa';
+  text-align: center;
+}
+
 h4,
 h5,
 h6 {
+    letter-spacing: 2px;
+    font-size: 35px;
     text-transform: uppercase;
     font-family: helvetica;
-    font-weight: 1200;
     text-align: center;
 }
 
@@ -72,7 +91,7 @@ hr.star-light:after {
 }
 
 hr.star-primary {
-    border-color: #212121;
+    border-color: rgb(99, 92, 76);
     max-width: 25px;
 
 }
@@ -92,15 +111,11 @@ hr.star-primary:after {
     width:100%;
     overflow: hidden;
     font-family: sans-serif;
-}
-
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+    height: 60vh;
 }
 
 @media(min-width:768px) {
-.header .container-fluid {
+.header .container {
         padding-top: 400px;
         padding-bottom: 50px;
     }
@@ -127,11 +142,6 @@ header .intro-text .skills {
         width: 100%;
     }
 
-    header img.img-bigScreen {
-        display: none;
-        padding: 0;
-    }
-
     hr.star-light:after {
     background-color: #F7CC01;
 }
@@ -146,19 +156,18 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
 .navbar-fixed-top {
-        background-color: rgba(255, 0, 0, 0.5);
+        background-color: rgba(217, 173, 115, .9);
         padding: 25px 0;
         -webkit-transition: padding .7s;
         -moz-transition: padding .3s;
-        transition: padding .3s;
+        transition-delay: padding .3s;
 }
 
 .navbar-fixed-top .navbar-brand {
-        content: ""
-        font-size: 6em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
+        font-size: 7em;
+        -webkit-transition: all .7s;
+        -moz-transition: all .7s;
+        transition-delay: all .30s;
 }
 
 .navbar-fixed-top.navbar-shrink {
@@ -170,12 +179,17 @@ header .intro-text .skills {
     }
 }
 
-.navbar {
-    font-family: sans-serif;
-    letter-spacing: 2px;
+.navbar-brand {
+  color: rgb(99, 92, 76);
+  font-weight: bolder;
+  font-size: 90px;
+  font-family: 'Comfortaa';
+  letter-spacing:-15px;
+  background-color: rgba(242, 239, 227, .5);
 }
 
 .nav .navbar-nav .navbar-right {
+  color: rgb(4, 133, 150);
 }
 
 .navbar .navbar-nav {
@@ -186,6 +200,8 @@ header .intro-text .skills {
 
 .navbar-inverse .navbar-toggle {
     border-color:#fdd200;
+    background-color: rgba(217, 173, 115,0.2);
+
 }
 
 .navbar-inverse .navbar-toggle:hover {
@@ -193,20 +209,21 @@ header .intro-text .skills {
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color:#fff;
+  background-color:#fdd200;
 }
 
 .navbar-inverse .navbar-nav>li>a {
     background-color: black;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: #fdd200;
+    color: rgb(99, 92, 76);
+    transition: .6s ease;
 }
 
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
-    color: black;
+    color: rgb(99, 92, 76);
 }
 
 .navbar .navbar-nav li a:focus {
@@ -214,22 +231,21 @@ header .intro-text .skills {
 }
 
 .navbar-inverse {
-    border: 0;
+    border: solid;
     border-color: transparent;
 }
-
 
 .hero {
   background: url("../images/workdesk.jpg") no-repeat scroll center center;
   background-size: cover;
   width: 100%;
   height: 60vh;
-
+  background-color: rgba(0,0,0,0.3);
 }
 
-.section h2 {
-    margin: 0;
-    font-size: 25px;
+.section .h2 {
+    margin-bottom:10px;
+    font-size: 50px;
 }
 
 .section.success {
@@ -334,11 +350,11 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 }
 
 .btn-outline {
-    margin-top: 15px;
-    border: solid 2px #212121;
+    margin-top: 20px;
+    border: solid 2px #233140;
     border-radius: 20px;
     font-size: 20px;
-    color: #212121;
+    color: #233140;
     background:#fff;
     transition: all .3s ease-in-out;
 }
@@ -348,7 +364,7 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 .btn-outline:active,
 .btn-outline.active {
     color: #212121;
-    background: #fdd200;
+    background: #233140;
 }
 
 /*******btn double line style starts***********/
@@ -409,14 +425,14 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 /*******btn double line style ends***********/
 
 #contact {
-    background: #d2eae3;
+    background: rgba(242, 239, 227, .5);
 }
 #contact hr.star-primary:after {
     background-color: #d2eae3;
 }
 
 #contact .form-padding {
-    padding:50px 10px;
+    padding:15px 15px;
 }
 
 .floating-label-form-group input,
@@ -461,34 +477,34 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #697571;
+    color: rgba(242, 239, 227, .5);
 }
 
 form .floating-label-form-group {
-    background: #fad663;
-    border: 15px solid #212121;
+    background: rgba(217, 173, 115,.2);
+    border: 10px solid #233140;
     border-radius: 6px;
 }
 
 footer {
-    color: black;
+    color: rgba(242, 239, 227, .5);
 }
 
 footer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 10px;
     background-color: #2c3e50;
 }
 
 footer .footer-col {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 footer .footer-below {
-    padding: 25px 0;
+    padding: 15px 0;
     background-color: #233140;
 }
 
@@ -496,10 +512,10 @@ footer .footer-below {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid white;
     border-radius: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 45px;
 }
 
