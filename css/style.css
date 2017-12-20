@@ -1,6 +1,5 @@
 body {
     overflow-x: hidden;
-    color: #212121;
 }
 
 p {
@@ -17,12 +16,9 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    text-transform:uppercase;
-    text-transform: ease;
     letter-spacing: 8px;
     font-size: 22px;
     font-family: 'Comfortaa';
-    transition-delay: .1s;
 }
 
 .h1 {
@@ -30,17 +26,15 @@ a.active {
 }
 
 h2 {
-  letter-spacing: 10px;
+  letter-spacing: 15px;
   font-size: 50px;
-  text-transform: uppercase;
-  font-family: helvetica;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
 h3 {
   letter-spacing: 1px;
   font-size: 30px;
-  text-transform: uppercase;
   font-family: 'Comfortaa';
   text-align: center;
 }
@@ -106,13 +100,7 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-.header {
-    content: ""
-    width:100%;
-    overflow: hidden;
-    font-family: sans-serif;
-    height: 60vh;
-}
+
 
 @media(min-width:768px) {
 .header .container {
@@ -121,10 +109,6 @@ hr.star-primary:after {
     }
 .header {
         font-size: 4.75em;
-    }
-
-.skills {
-        font-size: 1.75em;
     }
 }
 
@@ -137,8 +121,7 @@ hr.star-primary:after {
         background-position: center 100%;
     }
     header .container-fluid {
-        padding-top: 100px;
-        padding-bottom: 200px;
+        padding-bottom:10px;
         width: 100%;
     }
 
@@ -156,18 +139,26 @@ hr.star-primary:after {
 
 @media(min-width:768px) {
 .navbar-fixed-top {
-        background-color: rgba(217, 173, 115, .9);
-        padding: 25px 0;
-        -webkit-transition: padding .7s;
-        -moz-transition: padding .3s;
-        transition-delay: padding .3s;
+        background-color: rgba(0,0,0,.05);
+        padding: 10px 0;
+        -webkit-transition: padding .7s ease-in-out;
+        -moz-transition: padding .3s ease-in-out;
+        transition-delay: padding .3s ease-in-out;
 }
 
 .navbar-fixed-top .navbar-brand {
-        font-size: 7em;
-        -webkit-transition: all .7s;
-        -moz-transition: all .7s;
-        transition-delay: all .30s;
+        font-size: 4em;
+        color:#1b242d;
+        -webkit-transition: all .7s ease-in-out;
+        -moz-transition: all .7s ease-in-out;
+        transition-delay: all .30s ease-in-out;
+}
+
+.navbar-fixed-top .navbar-brand:hover {
+  color: rgb(247, 204, 1);
+  font-family: 'Comfortaa';
+  font-size: 6em;
+  font-weight: bolder;
 }
 
 .navbar-fixed-top.navbar-shrink {
@@ -182,42 +173,40 @@ hr.star-primary:after {
 .navbar-brand {
   color: rgb(99, 92, 76);
   font-weight: bolder;
-  font-size: 90px;
   font-family: 'Comfortaa';
-  letter-spacing:-15px;
-  background-color: rgba(242, 239, 227, .5);
+  letter-spacing:-10px;
+  background-color: rgba(198, 191, 159, .5);
 }
 
 .nav .navbar-nav .navbar-right {
-  color: rgb(4, 133, 150);
 }
 
 .navbar .navbar-nav {
     letter-spacing: 10px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 
 .navbar-inverse .navbar-toggle {
-    border-color:#fdd200;
-    background-color: rgba(217, 173, 115,0.2);
+    border-color:rgb(242, 239, 227);
+    background-color: rgb(44, 62, 80);
 
 }
 
 .navbar-inverse .navbar-toggle:hover {
-    background-color:rgb(255,255,255);
+    background-color:rgb(242, 239, 227);
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color:#fdd200;
+  background-color:rgb(242, 239, 227);
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    background-color: black;
+    background-color: rgb(44, 62, 80);
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: rgb(99, 92, 76);
-    transition: .6s ease;
+    color: rgb(44, 62, 80);
+    transition: .6s ease-in-out;
 }
 
 .navbar-inverse .navbar-nav>.active>a,
@@ -239,9 +228,13 @@ hr.star-primary:after {
   background: url("../images/workdesk.jpg") no-repeat scroll center center;
   background-size: cover;
   width: 100%;
-  height: 60vh;
-  background-color: rgba(0,0,0,0.3);
+  height: 80vh;
 }
+.hero-overlay {
+  background-color: black;
+  opacity: .9;
+}
+
 
 .section .h2 {
     margin-bottom:10px;
@@ -250,7 +243,7 @@ hr.star-primary:after {
 
 .section.success {
     color: #fff;
-    background: #fad663;
+    background: #d9ad73;
 }
 
 @media(max-width:767px) {
@@ -272,27 +265,26 @@ hr.star-primary:after {
 
 }
 
-#myLikes .portfolio-item,
+#mySkills .portfolio-item,
 #about .about-item {
     text-align: center;
 }
-#myLikes .portfolio-item p,#about .about-item p {
+#mySkills .portfolio-item p,#about .about-item p {
     text-align: center;
     line-height: 1.5;
     padding-bottom: 5px;
 }
-#myLikes .portfolio-item-Three p, #about .about-item-Three p {
+#mySkills .portfolio-item-Three p, #about .about-item-Three p {
     text-align: center;
     padding-bottom: 5px;
 }
 
-#myLikes .portfolio-item header, #about .about-item header {
+#mySkills .portfolio-item header, #about .about-item header {
     background: none;
 }
 
 .about-item .img-responsive {
     margin: 0 auto;
-
 }
 
 #portfolio .portfolio-item {
@@ -301,14 +293,14 @@ hr.star-primary:after {
 }
 
 #portfolio .portfolio-item .portfolio-link,
-#myLikes .portfolio-item .portfolio-link {
+#mySkills .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 100%;
 }
 
-#myLikes .portfolio-link .fa {
+#mySkills .portfolio-link .fa {
     font-size: 10em;
     padding: 10px 10px;
     color:#212121;
@@ -338,7 +330,7 @@ hr.loc-hr {
 }
 
 div.contact-btn .btn-outline {
-    background: #d2eae3;
+    background: rgb(247, 204, 1);
 }
 
 div.btn-outline, div.contact-btn .btn-outline {
@@ -424,11 +416,9 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 
 /*******btn double line style ends***********/
 
-#contact {
-    background: rgba(242, 239, 227, .5);
-}
-#contact hr.star-primary:after {
-    background-color: #d2eae3;
+
+ contact hr.star-primary:after {
+    background-color: rgb(247, 204, 1);
 }
 
 #contact .form-padding {
@@ -468,7 +458,7 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 
 .floating-label-form-group::not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #1a1a1a;
 }
 
 .floating-label-form-group-with-value label {
@@ -481,7 +471,7 @@ div.btn-outline:hover, div.contact-btn .btn-outline:hover {
 }
 
 form .floating-label-form-group {
-    background: rgba(217, 173, 115,.2);
+    background: rgb(242, 239, 227);
     border: 10px solid #233140;
     border-radius: 6px;
 }
@@ -504,8 +494,8 @@ footer .footer-col {
 }
 
 footer .footer-below {
-    padding: 15px 0;
-    background-color: #233140;
+    padding: 5px 0;
+    background-color: rgb(27, 36, 45);
 }
 
 .btn-social {
