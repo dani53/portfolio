@@ -140,14 +140,15 @@ hr.star-primary:after {
 @media(min-width:768px) {
 .navbar-fixed-top {
         background-color: rgba(0,0,0,.05);
-        padding: 10px 0;
+        padding: 15px 0;
         -webkit-transition: padding .7s ease-in-out;
         -moz-transition: padding .3s ease-in-out;
         transition-delay: padding .3s ease-in-out;
 }
 
 .navbar-fixed-top .navbar-brand {
-        font-size: 4em;
+        margin-top: 10px;
+        font-size: 6em;
         color:#1b242d;
         -webkit-transition: all .7s ease-in-out;
         -moz-transition: all .7s ease-in-out;
@@ -155,7 +156,7 @@ hr.star-primary:after {
 }
 
 .navbar-fixed-top .navbar-brand:hover {
-  color: rgb(247, 204, 1);
+  color: white;
   font-family: 'Comfortaa';
   font-size: 6em;
   font-weight: bolder;
@@ -166,7 +167,7 @@ hr.star-primary:after {
     }
 
 .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 3em;
     }
 }
 
@@ -183,7 +184,9 @@ hr.star-primary:after {
 
 .navbar .navbar-nav {
     letter-spacing: 10px;
-    font-weight: bolder;
+    font-size: 2em;
+    font-style: 'Comfortaa';
+    color: white;
 }
 
 
@@ -203,10 +206,12 @@ hr.star-primary:after {
 
 .navbar-inverse .navbar-nav>li>a {
     background-color: rgb(44, 62, 80);
+
 }
 .navbar-inverse .navbar-nav>li>a:hover {
     color: rgb(44, 62, 80);
-    transition: .6s ease-in-out;
+    font-size: 1em;
+    transition: all .8s ease-in-out;
 }
 
 .navbar-inverse .navbar-nav>.active>a,
@@ -220,8 +225,26 @@ hr.star-primary:after {
 }
 
 .navbar-inverse {
-    border: solid;
     border-color: transparent;
+}
+
+@media(max-width:767px) {
+.navbar-fixed-top {
+          background-color: rgba(0,0,0,.05);
+          padding: 8px 0;
+          -webkit-transition: all .7s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          transition-delay: all .3s ease-in-out;
+}
+
+.navbar-fixed-top .navbar-brand {
+        margin-top: 10px;
+        font-size: 6em;
+        color:rgb(27, 36, 45);
+        -webkit-transition: all .7s ease-in-out;
+        -moz-transition: all .7s ease-in-out;
+        transition-delay: all .30s ease-in-out;
+}
 }
 
 .hero {
@@ -262,24 +285,29 @@ hr.star-primary:after {
         padding-left: 0;
     }
 }
-
+@media(max-width:767px) {
+    #portfolio .col-sm-3 {
+        padding-right:0;
+        padding-left: 0;
+    }
 }
 
-#mySkills .portfolio-item,
+#myServices .portfolio-item,
+#portfolio .portfoloi-item,
 #about .about-item {
     text-align: center;
 }
-#mySkills .portfolio-item p,#about .about-item p {
+#myServices .portfolio-item p,#about .about-item p {
     text-align: center;
     line-height: 1.5;
     padding-bottom: 5px;
 }
-#mySkills .portfolio-item-Three p, #about .about-item-Three p {
+#myServices .portfolio-item-Three p, #about .about-item-Three p {
     text-align: center;
     padding-bottom: 5px;
 }
 
-#mySkills .portfolio-item header, #about .about-item header {
+#myServices .portfolio-item header, #about .about-item header {
     background: none;
 }
 
@@ -293,14 +321,14 @@ hr.star-primary:after {
 }
 
 #portfolio .portfolio-item .portfolio-link,
-#mySkills .portfolio-item .portfolio-link {
+#myServices .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 100%;
 }
 
-#mySkills .portfolio-link .fa {
+#myServices .portfolio-link .fa {
     font-size: 10em;
     padding: 10px 10px;
     color:#212121;
