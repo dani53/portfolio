@@ -3,7 +3,11 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    color: rgb(27, 36, 45);
 }
 
 p.small {
@@ -22,20 +26,28 @@ a.active {
 }
 
 h1 {
-  letter-spacing: 10px;
+  padding-top: 150px;
+  position: relative;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #F7CC01;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bolder;
+  font-size: 8em;
+  text-shadow: 5px 5px rgba(27, 36, 45, .1);
 }
 
 h2 {
   letter-spacing: 15px;
-  font-size: 50px;
-  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
   text-align: center;
   color: rgb(27, 36, 45);
 }
 
 h3 {
   letter-spacing: 1px;
-  font-size: 30px;
+  font-size: 23px;
   font-family: 'Comfortaa';
   text-align: center;
 }
@@ -44,9 +56,9 @@ h4,
 h5,
 h6 {
     letter-spacing: 2px;
-    font-size: 35px;
+    font-size: 15px;
     text-transform: uppercase;
-    font-family: helvetica;
+    font-family: 'Marcellus';
     text-align: center;
 }
 
@@ -97,22 +109,6 @@ hr.star-primary:after {
     max-width: 25px;
 }
 
-.img-centered {
-    margin: 0 auto;
-}
-
-
-
-@media(min-width:768px) {
-.header .container {
-    padding-top: 400px;
-    padding-bottom: 50px;
-}
-.header {
-    font-size: 4.75em;
-}
-}
-
 @media(min-width:1024px) {
 .header {
     -webkit-background-size: cover;
@@ -121,10 +117,7 @@ hr.star-primary:after {
     background-size: cover;
     background-position: center 100%;
 }
-.header .container-fluid {
-    padding-bottom:10px;
-    width: 100%;
-}
+
 
 .hr.star-light:after {
     background-color: #F7CC01;
@@ -145,7 +138,7 @@ hr.star-primary:after {
     font-family: 'Comfortaa';
     font-size: 6em;
     font-weight: bolder;
-    letter-spacing:-10px;
+    letter-spacing:-20px;
     color:#1b242d;
     background-color: rgba(198, 191, 159, .5);
     -webkit-transition: all .7s ease-in-out;
@@ -176,15 +169,15 @@ hr.star-primary:after {
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    background-color: rgb(44, 62, 80);
+    background-color: rgba(44, 62, 80, .85);
     color: #ffffff;
     font-size: 22px;
 
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: rgb(44, 62, 80);
+    color: #F7CC01;
     font-family: 'Comfortaa', cursive;
-    font-size: 18px;
+    font-size: 20px;
     transition: all .4s ease-in-out;
 }
 
@@ -222,11 +215,12 @@ hr.star-primary:after {
 }
 }
 
-.hero {
-  background: url("../images/workdesk.jpg") no-repeat scroll center center;
+#page-top {
+  background: url("../images/workdeskDarkGray.jpg") no-repeat scroll center center;
   background-size: cover;
+  position: relative;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
 }
 
 .section{
@@ -234,20 +228,8 @@ hr.star-primary:after {
     font-size: 50px;
 }
 
-.section.success {
-    color: #fff;
-    background: #d9ad73;
-}
 
-@media(max-width:767px) {
-    section {
-        padding: 25px 0;
-    }
 
-    section.first {
-        padding-top: 75px;
-    }
-}
 
 @media(min-width:767px) {
     #portfolio .col-sm-3 {
